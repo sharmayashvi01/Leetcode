@@ -6,13 +6,14 @@ public:
     // }
     // MOORE VOTING ALGORITHM
         
-        int count=0,candidate;
+        int count=0,candidate=nums[0];
         
-        for(int num:nums){
-            if(count==0)
-                candidate=num;
-            
-            if(num==candidate)
+        for(int i=0;i<nums.size();i++)
+        {
+            if(count==0){
+                candidate=nums[i];
+            }
+            if(nums[i]==candidate)
                 count++;
             else
                 count--;
